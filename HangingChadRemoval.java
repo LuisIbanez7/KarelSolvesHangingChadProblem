@@ -3,7 +3,7 @@ import stanford.karel.*;
 public class HangingChadRemoval extends SuperKarel{
 	int xPosition = 1;
 	public void run() {
-		moveToStartingPoint();
+		//moveToStartingPoint();
 		checkBallotAndClearHangingChads();
 	}
 	private void checkBallotAndClearHangingChads() {
@@ -17,9 +17,9 @@ public class HangingChadRemoval extends SuperKarel{
 			}
 		}		
 	}
-	private void moveToStartingPoint() {
-		moveToX1Y3();
-	}
+//	private void moveToStartingPoint() {
+//		moveToX1Y3();
+//	}
 	private void clearHangingChads() {
 		pickAllBeepers();
 		checkTop(false);
@@ -37,10 +37,7 @@ public class HangingChadRemoval extends SuperKarel{
 	private boolean checkIfHangingChad() {
 		boolean isHangingChad = false;
 		isHangingChad = checkMiddle(isHangingChad);
-		isHangingChad = checkTop(isHangingChad);
-		isHangingChad = checkBottom(isHangingChad);
-		
-		backToMiddle();
+
 		return isHangingChad;
 		
 	}
@@ -72,10 +69,10 @@ public class HangingChadRemoval extends SuperKarel{
 		}		
 		return isHangingChad;
 	}
-	private void moveToX1Y3() {
-		turnLeft();
-		move();
-		move();
-		turnRight();
-	}
+//	private void moveToX1Y3() {
+//		turnLeft();
+//		move();
+//		move();
+//		turnRight();
+//	}
 }
